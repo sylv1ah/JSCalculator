@@ -1,31 +1,16 @@
 var currentDisplay = 0;
 var storedInput = 0;
-var secondInput =0;
-var operator = ""
-var runningTotal = "";
+var operator = "";
 var finalResult = "";
-
-// const keys = document.querySelector('.keys');
-// const calculator = document.querySelector('.calculator');
-
-// keys.addEventListener('click', e => {
-//     if(e.target.matches('button')){
-        
-//     }
-// })
 
 function inputNum(num){
     if(document.getElementById('display').value === '0'){
         document.getElementById('display').value = num;
-        
-        
     }else{
         document.getElementById('display').value = document.getElementById('display').value + num;
         currentDisplay = document.getElementById('display').value;
     }
-    
     console.log("currentDisplay = " + currentDisplay);
-    
 };
 
 function inputSymbol(sym){
@@ -53,9 +38,7 @@ function inputSymbol(sym){
 function clearDisplay(){
     document.getElementById('display').value = "0";
     currentDisplay = "0";
-    
     console.log("currentDisplay = " + currentDisplay);
-    
 };
 
 function equate(){
@@ -63,9 +46,10 @@ function equate(){
     if(equation){
         document.getElementById('display').value = eval(equation);
         current = 0;
-
+        finalResult = eval(equation);
     }
-    console.log("equation = " + equation)
+    console.log("equation = " + equation);
+    console.log("finalResult = " + finalResult)
 };
 
 function inputZero(){
@@ -86,17 +70,9 @@ function decimal(){
     console.log(eachInput);
     if(!document.getElementById('display').value.includes('.')){
         document.getElementById('display').value = document.getElementById('display').value + '.';
-    //     if(storedInput.includes('.')){
-    //         document.getElementById('display').value = document.getElementById('display').value + '.'
-    //     }
-    // }else if(){
-    //     document.getElementById('display').value = document.getElementById('display').value + '.'
     }else if(!eachInput.includes('.')){
         document.getElementById('display').value = document.getElementById('display').value + '.';
-    
     }else{
         document.getElementById('display').value = document.getElementById('display').value + ""
     }
-
-    // if(document.getElementById('display').value.includes('.'))
 }

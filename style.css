@@ -1,5 +1,6 @@
 html {
     font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
     box-sizing: border-box;
     align-content: center;
     text-align: center;
@@ -7,6 +8,8 @@ html {
     flex-direction: row;
     justify-content: center;
     background-color: rgb(241, 241, 241);
+    background-image: linear-gradient(to bottom right, rgb(223, 139, 139), rgb(140, 165, 236));
+    background-repeat: no-repeat;
 }
 
 .calculator {
@@ -50,6 +53,9 @@ html {
     color: #ffff;
     border-radius: 30px;
 }
+#clear:hover {
+    background-color: rgba(102, 101, 101, 0.486);
+}
 
 #zero {
     grid-column: span 2;
@@ -58,19 +64,53 @@ html {
 
 .operator,
 #equal {
-    background-color: rgb(255, 137, 41);
     color: #ffff;
     border-radius: 50%;
 }
 
+#divide {
+    background-color: #D058E8;
+}
+#divide:hover {
+    background-color: rgba(208, 88, 232, 0.534)
+}
+
+#multiply {
+    background-color: #F47474;
+}
+#multiply:hover {
+    background-color: rgba(244, 116, 116, 0.52);
+}
+
+#subtract {
+    background-color: #7BB4F7;
+}
+#subtract:hover {
+    background-color: rgba(123, 181, 247, 0.541);
+}
+
+#add {
+    background-color: #F58E23;
+}
+#add:hover {
+    background-color: rgba(245, 144, 35, 0.493);
+}
+
+#equal {
+    background-color: #25CB83;
+}
+#equal:hover {
+    background-color: rgba(37, 203, 131, 0.514);
+}
+
 .num:hover,
 #decimal:hover {
-    background-color: rgb(255, 185, 129);
+    background-color: rgba(223, 139, 139, 0.466);
     border-radius: 50%;
 }
 
 #zero:hover {
-    background-color: rgb(255, 185, 129);
+    background-color: rgba(223, 139, 139, 0.609);
     border-radius: 25px;
 }
 
