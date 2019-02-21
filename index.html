@@ -12,11 +12,11 @@
   <body>
     <h1>JavaScript Calculator</h1>
     <div class="calculator">
-        <div class="display">
-            <input id="display" type="text" placeholder=0 disabled>
+        <div class="displayBox">
+            <input id="display" type="text" value=0 disabled>
         </div>
         <div class="keys">
-            <button id="clear" class="clear btn" type=reset value="c" onclick="clearDisplay()">clear</button>
+            <button id="clear" class="clear btn" type=reset value="c" onclick="clearDisplay()">C</button>
             <button id="divide" class="operator btn" value="/" onclick="inputSymbol('/')">/</button>
 
             <button id="seven" class="num btn" value="7" onclick="inputNum(7)">7</button>
@@ -34,7 +34,7 @@
             <button id="three" class="num btn" value="3" onclick="inputNum(3)">3</button>
             <button id="add" class="operator btn" value="+" onclick="inputSymbol('+')">+</button>
 
-            <button id="zero" class=" btn" value="0" onclick="inputNum(0)">0</button>
+            <button id="zero" class=" btn" value="0" onclick="inputZero()">0</button>
             <button id="decimal" class="btn" value="." onclick="decimal()">.</button>
             <button id="equal" class="btn" value="=" onclick="equate()">=</button>   
         </div>
