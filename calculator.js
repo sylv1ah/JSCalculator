@@ -28,7 +28,19 @@ function inputNum(num){
 };
 
 function inputSymbol(sym){
-    document.getElementById('display').value = document.getElementById('display').value + sym;
+    storedInput = document.getElementById('display').value;
+    currentDisplay = 0;
+    if(document.getElementById('display').value.slice(-1) == '+'){
+        document.getElementById('display').value = document.getElementById('display').value.replace(/.$/,sym)
+    }else if(document.getElementById('display').value.slice(-1) == '-'){
+        document.getElementById('display').value = document.getElementById('display').value.replace(/.$/,sym)
+    }else if(document.getElementById('display').value.slice(-1) == '*'){
+        document.getElementById('display').value = document.getElementById('display').value.replace(/.$/,sym)
+    }else if(document.getElementById('display').value.slice(-1) == '/'){
+        document.getElementById('display').value = document.getElementById('display').value.replace(/.$/,sym)
+    }else{
+        document.getElementById('display').value = document.getElementById('display').value + sym;
+    }
     // firstInput = document.getElementById('display').value.slice(0,-1);
     
     operator = sym;
