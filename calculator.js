@@ -17,7 +17,8 @@ var finalResult = "";
 function inputNum(num){
     if(document.getElementById('display').value === '0'){
         document.getElementById('display').value = num;
-        currentDisplay = document.getElementById('display').value;
+        
+        
     }else{
         document.getElementById('display').value = document.getElementById('display').value + num;
         currentDisplay = document.getElementById('display').value;
@@ -41,10 +42,11 @@ function inputSymbol(sym){
     }else{
         document.getElementById('display').value = document.getElementById('display').value + sym;
     }
-    // firstInput = document.getElementById('display').value.slice(0,-1);
     
     operator = sym;
-    console.log("operator = " + operator)
+    console.log("operator = " + operator);
+    console.log("currentDisplay = " + currentDisplay);
+    console.log("storedInput = " + storedInput);
     
 };
 
@@ -70,6 +72,8 @@ function inputZero(){
     if(document.getElementById('display').value === '0'){
         document.getElementById('display').value = document.getElementById('display').value + "";
         currentDisplay =  document.getElementById('display').value; 
+    }else if(currentDisplay === 0){
+        document.getElementById('display').value = document.getElementById('display').value + "";
     }else{
         document.getElementById('display').value = document.getElementById('display').value + '0';
         currentDisplay =  document.getElementById('display').value;
@@ -78,7 +82,21 @@ function inputZero(){
 };
 
 function decimal(){
+    let eachInput = document.getElementById('display').value.split(/[+*\/-]/g).pop();
+    console.log(eachInput);
     if(!document.getElementById('display').value.includes('.')){
-        document.getElementById('display').value = document.getElementById('display').value + '.'
+        document.getElementById('display').value = document.getElementById('display').value + '.';
+    //     if(storedInput.includes('.')){
+    //         document.getElementById('display').value = document.getElementById('display').value + '.'
+    //     }
+    // }else if(){
+    //     document.getElementById('display').value = document.getElementById('display').value + '.'
+    }else if(!eachInput.includes('.')){
+        document.getElementById('display').value = document.getElementById('display').value + '.';
+    
+    }else{
+        document.getElementById('display').value = document.getElementById('display').value + ""
     }
+
+    // if(document.getElementById('display').value.includes('.'))
 }
