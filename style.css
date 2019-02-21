@@ -2,7 +2,7 @@ html {
     font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
     box-sizing: border-box;
-    align-content: center;
+    align-items: center;
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -12,12 +12,18 @@ html {
     background-repeat: no-repeat;
 }
 
+h1 {
+    color: white;
+    text-shadow: 5px 5px 2px  gray;
+}
+
 .calculator {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 400px;
     border: none;
-    background-color: #ffff;
+    background-color: rgba(255, 255, 255, 0.699);
     padding: 20px;
     box-shadow: 12px 12px 2px 1px rgba(94, 94, 94, 0.192);
     
@@ -101,6 +107,12 @@ html {
 }
 #equal:hover {
     background-color: rgba(37, 203, 131, 0.514);
+}
+
+.num,
+#decimal,
+#zero {
+    background: none;
 }
 
 .num:hover,
